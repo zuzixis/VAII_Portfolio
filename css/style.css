@@ -39,6 +39,7 @@ header {
 
 .left-blue-area li {
     margin-bottom: 8px;
+    list-style: none;
 }
 .left-blue-area img {
     height: 32px;
@@ -71,6 +72,8 @@ header {
 
 #first-section{
     margin-top: 200px;
+    margin-top: 250px;
+    height: 120%;
 }
 
 .main-menu {
@@ -124,7 +127,7 @@ header {
     height: 36px;
 }
 
-#btn-prihlasenie:hover{
+#btn-prihlasenie:hover, #btn-new-blog:hover{
     background-color: #0E78AD;
 }
 
@@ -148,6 +151,7 @@ header {
     text-align: right;
     padding-right: 250px;
     padding-top: 50px;
+    margin-bottom: 100px;
 }
 
 .main-title h1{
@@ -167,6 +171,121 @@ header {
     font-family: Helvetica, sans-serif;
 }
 
+.body-page section{
+    border: 1px solid #000;
+    width: 66%;
+    margin-bottom: 50px;
+    margin-left: 360px;
+}
+
+/*====================================================================================*/
+/*BLOG*/
+
+.blog-body section{
+    margin-left: 25%;
+}
+
+
+.blog-body h1{
+    font-family: "Bahnschrift Condensed",sans-serif;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.blog-body li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.blog-body li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.blog-body li:not(.no-active):hover::before, .blog-body li.active::before {
+    background-image: url(../img/menu-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    display: block;
+    height: 10px;
+    padding-bottom: 10px;
+    background-position-x: center;
+    content: "";
+}
+
+#btn-new-blog {
+    background-color: #1193D6;
+    border: 1px solid #000;
+    border-radius: 15px;
+    color: #FFF;
+    text-align: center;
+    font-family: Arial,Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 4px;
+}
+
+
+.box{
+    display: flex;
+    margin: 25px;
+    border-bottom: 1px solid #000;
+    width: 70%;
+}
+
+.box img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.info{
+    padding: 15px;
+}
+
+.info a {
+    text-decoration: none;
+    color: #272727;
+}
+
+.info h3 {
+    font-family:  Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.info h3:hover {
+    color: #0E78AD;
+}
+
+.info h4{
+    font-family:  Arial, sans-serif;
+    font-weight: 10;
+    font-size: 15px;
+}
+.info h4:hover{
+    color: #0E78AD;
+}
+.info p{
+    padding-top: 5px;
+}
+
+/*-----------------------------------------*/
+.body-page h2{
+    font-family: "Bahnschrift Condensed",sans-serif;
+    font-size: 50px;
+}
+
+.body-page {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
 /*===========================================================================================*/
 /*
     RESPONZÍVNY DIZAJN
@@ -175,7 +294,7 @@ header {
 /*Desktops - menší */
 @media screen and (max-width: 1600px){
     /*NAVIGÁCIA*/
-    .hlavne-menu{
+    .main-menu{
         padding-right: 8px;
     }
     .left-blue-area{
@@ -203,6 +322,17 @@ header {
         color: #0f7db6;
         font-size: 100px;
     }
+
+    /*BLOGY*/
+    .blog-body section{
+        margin-top: 200px;
+        margin-left: 260px;
+    }
+
+    .box{
+        width: 90%;
+    }
+
 
 }
 
@@ -257,6 +387,18 @@ header {
     .main-title h2 {
         padding-top: 0;
         font-size: 14px;
+    }
+
+    /*BLOG*/
+    .blog-body section{
+        margin-left: 120px;
+    }
+
+    .blog-body h1{
+        padding-top: 40px;
+    }
+    .box{
+        width: 90%;
     }
 
 }
@@ -331,4 +473,61 @@ header {
         padding-top: 0;
         font-size: 12px;
     }
+
+    /*BLOG*/
+    .blog-body section{
+        margin-left: 70px;
+    }
+
+    .blog-body h1{
+        padding-top: 30px;
+        font-size: 25px;
+    }
+
+    .blog-body li {
+        margin-left: 10px;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .blog-body li:not(.no-active):hover::before, .blog-body li.active::before {
+        background-size: 10px 10px;
+        height: 10px;
+    }
+
+    #btn-new-blog {
+        font-size: 12px;
+        padding: 2px;
+    }
+
+    .box{
+        margin: 5px;
+        width: 87%;
+    }
+
+    .box img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .info{
+        padding: 10px;
+    }
+
+
+    .info h3 {
+        font-family:  Helvetica, sans-serif;
+        font-size: 15px;
+    }
+
+
+    .info h4{
+        font-size: 10px;
+    }
+
+    .info p{
+        font-size: 12px;
+    }
+
+
 }
