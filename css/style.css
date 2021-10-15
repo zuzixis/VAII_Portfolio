@@ -130,7 +130,7 @@ a{
     height: 36px;
 }
 
-#btn-prihlasenie:hover, #btn-new-blog:hover{
+#btn-prihlasenie:hover, #btn-new-blog:hover,  .btn-h-center{
     background-color: #0E78AD;
 }
 
@@ -148,13 +148,21 @@ a{
     width: auto;
 }
 
+footer{
+    height: 120px;
+    width: 100%;
+    bottom: 0;
+    background: #202020;
+}
+
 /*==========================================================================================*/
 /*===STYLE-DOMOV===*/
 .main-title{
     text-align: right;
-    padding-right: 250px;
-    padding-top: 50px;
-    margin-bottom: 100px;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    right: 10%;
 }
 
 .main-title h1{
@@ -163,7 +171,8 @@ a{
 }
 
 .main-title h1:first-line{
-    color: #0f7db6;
+    color: #202020;
+    text-shadow: 2px 2px #FFF;
     font-size: 120px;
 }
 
@@ -174,12 +183,52 @@ a{
     font-family: Helvetica, sans-serif;
 }
 
-.body-page section{
-    border: 1px solid #000;
-    width: 66%;
-    margin-bottom: 50px;
-    margin-left: 360px;
+.body-page{
+    text-align: center;
 }
+
+.body-page p{
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.body-page section{
+    width: 65%;
+    margin: 5% 0 15% 25%;
+}
+
+.body-page h2{
+    font-size: 60px;
+    color: #202020;
+    /*text-shadow: 2px 2px #1193D6;*/
+    font-family: "Bahnschrift Condensed",sans-serif;
+}
+
+.body-page-photo{
+    max-width: 150px;
+    height: auto;
+}
+
+.btn-link{
+    margin: 20px 0 20px 0;
+}
+
+.btn-h-center{
+    background-color: #1193D6;
+    border: 1px solid #FFF;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px;
+    font-family: Arial Rounded MT, Arial, Helvetica, sans-serif;
+    margin: auto;
+    width: 15%;
+}
+
+.btn-link a{
+    color: #FFF;
+}
+
 
 /*====================================================================================*/
 /*BLOG*/
@@ -522,19 +571,6 @@ input[type="submit"]{
     text-decoration: underline;
 }
 
-/*========================================================================================*/
-
-/*-----------------------------------------*/
-/*.body-page h2{
-    font-family: "Bahnschrift Condensed",sans-serif;
-    font-size: 50px;
-}
-.body-page {
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    text-align: center;
-}*/
-
 /*===========================================================================================*/
 /*
     RESPONZÍVNY DIZAJN
@@ -568,7 +604,6 @@ input[type="submit"]{
     }
 
     .main-title h1:first-line{
-        color: #0f7db6;
         font-size: 100px;
     }
 
@@ -622,20 +657,34 @@ input[type="submit"]{
     }
     .main-title{
         margin-left: 125px;
+        top: 30%;
+        left: 0%;
+        right: 5%;
     }
 
     .main-title h1{
-        font-size: 40px;
+        font-size: 50px;
     }
 
     .main-title h1:first-line{
-        color: #0f7db6;
-        font-size: 70px;
+        font-size: 80px;
     }
 
     .main-title h2 {
         padding-top: 0;
         font-size: 14px;
+    }
+
+    .body-page p{
+        font-size: 14px;
+    }
+
+    .body-page h2{
+        font-size: 40px;
+    }
+
+    .body-page-photo{
+        max-width: 100px;
     }
 
     /*BLOG*/
@@ -713,6 +762,8 @@ input[type="submit"]{
     }
 
     .main-title {
+        top: 15%;
+        right: 5%;
         margin-left: 100px;
     }
 
@@ -721,7 +772,6 @@ input[type="submit"]{
     }
 
     .main-title h1:first-line {
-        color: #0f7db6;
         font-size: 60px;
     }
 
@@ -730,7 +780,27 @@ input[type="submit"]{
         font-size: 12px;
     }
 
-    /*BLOG*/
+    .body-page p{
+        font-size: 12px;
+    }
+
+    .body-page h2{
+        font-size: 28px;
+    }
+
+    .body-page-photo{
+        max-width: 80px;
+    }
+
+    .btn-link{
+        margin: 10px 0 10px 0;
+    }
+
+    .btn-h-center{
+        font-size: 14px;
+    }
+
+
     /*BLOG*/
     .blog-body section {
         margin-left: 70px;
@@ -837,8 +907,6 @@ input[type="submit"]{
         font-size: 12px;
         color: #666;
     }
-
-
 }
 
 /*=======================================================================*/
