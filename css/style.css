@@ -311,13 +311,12 @@ footer{
 
 #btn-new-blog {
     background-color: #1193D6;
-    border: 1px solid #000;
     border-radius: 15px;
     color: #FFF;
     text-align: center;
     font-family: Arial,Helvetica, sans-serif;
     font-size: 18px;
-    padding: 4px;
+    padding: 5px;
 }
 
 .box{
@@ -375,6 +374,84 @@ footer{
 .blogger-box{
     margin: 25px;
 }
+
+/*PÍSANIE BLOGU*/
+.blog-body-create #btn-new-blog{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.blog-body-create .center{
+    position: absolute;
+    top: 550px;
+    left: 57%;
+    transform: translate(-50%,-50%);
+    width: 63%;
+    border-radius: 10px;
+    font-family: sans-serif;
+    background: white;
+    margin: 25px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+}
+
+.blog-body-create .center h1{
+    font-size: 20px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.blog-body-create .center .left-side{
+    width: 30%;
+}
+
+.blog-body-create .center .right-side{
+    width: 70%;
+}
+
+.blog-body-create .center{
+    display: flex;
+    margin: 30px 0 0 0;
+    flex-wrap: wrap;
+    padding: 10px 40px;
+}
+
+.blog-body-create .center form {
+    padding: 0 14px;
+}
+
+
+#create-short-text{
+    width: 100%;
+    border-color: #1193D6;
+}
+
+#create-blog-text{
+    width: 90%;
+    border-color: #1193D6;
+    height: 370px;
+}
+
+textarea{
+    font-family:Arial,sans-serif;
+    font-size: 14px;
+}
+
+.blog-body-create label{
+    font-family: "Bahnschrift Condensed",sans-serif;
+    font-size: 16px;
+    margin-right: 50%;
+}
+
+.blog-body-create input[type="submit"] {
+    width: 30%;
+    height: 43px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    right: 0;
+}
+
 /*=============================================================================*/
 /*==PROFIL===*/
 section {
