@@ -228,7 +228,43 @@ footer{
 .btn-link a{
     color: #FFF;
 }
+/*===================================================================================*/
+/*===STYLE-PORTFÓLIÁ===*/
 
+.portfolio-page #first-section{
+    margin-top: 200px;
+}
+
+.portfolio-page section{
+    width: 65%;
+    margin: 2% 0 2% 25%;
+}
+
+.portfolio-page h1{
+    font-size: 50px;
+    font-family: "Bahnschrift Condensed",sans-serif;
+}
+
+.portfolio-page img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.portfolio-page .grid img {
+    width: 60%;
+}
+
+.portfolio-page a{
+    color: black;
+    font-family: sans-serif;
+}
+
+.portfolio-page a:hover{
+    color: #0E78AD;
+}
 
 /*====================================================================================*/
 /*BLOG*/
@@ -388,6 +424,7 @@ section {
 .contact img{
     width: 18px;
     height: auto;
+    margin-left: 7px;
 }
 
 .contact a, .contact span, .profil-blogs a{
@@ -406,6 +443,12 @@ section {
     font-family: "Bahnschrift Condensed",sans-serif;
     font-size: 30px;
     padding-top: 20px;
+}
+
+.profil-info p{
+    font-size: 16px;
+    margin-left: 7px;
+    font-family: Arial, sans-serif;
 }
 
 .profil-blogs li{
@@ -427,12 +470,13 @@ section {
 }
 
 .grid-item{
+    min-width: 300px;
+    min-height: 300px;
     overflow: hidden;
-    max-width:500px;
+    max-width: 500px;
     flex: 0 0 30%;
     padding: 10px;
     flex-wrap: wrap;
-
     margin: 25px 0;
     text-align: center;
     box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
@@ -451,8 +495,7 @@ section {
 .detail-grid-item{
     text-align: center;
     width: 100%;
-    justify-content: space-evenly;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 /*PRIHLASENIE SA*/
@@ -617,7 +660,20 @@ input[type="submit"]{
         width: 90%;
     }
 
+    /*==PROFIL===*/
+    .grid{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 30px 0 0 0;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
 
+    .grid-item{
+        min-width: 270px;
+        min-height: 270px;
+        max-width: 450px;
+    }
 }
 
 /* Tablety */
@@ -703,6 +759,67 @@ input[type="submit"]{
     .center{
         width: 300px;
         left:58%;
+    }
+
+    /*==PROFIL===*/
+    .header-profil{
+        padding-top:60px;
+    }
+    .header-profil img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .header-title{
+        padding-top: 10px;
+    }
+
+    .contact li {
+        font-size: 13px;
+    }
+
+    .header-title h1{
+        font-size: 30px;
+    }
+
+    .skill-icons{
+        width: 40px;
+        height: auto;
+    }
+
+    .contact img{
+        width: 15px;
+    }
+
+    .p-subtitles {
+        font-size: 25px;
+    }
+
+    .profil-info p{
+        font-size: 15px;
+    }
+
+    .profil-blogs li{
+        font-size: 15px;
+    }
+
+    .grid{
+        margin: 10px 0 0 0;
+    }
+
+    .grid-item{
+        min-width: 200px;
+        min-height: 200px;
+        max-width: 400px;
+        flex: 0 0 20%;
+        padding: 7px;
+    }
+
+    .detail-grid-item{
+        text-align: center;
+        width: 100%;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
     }
 
 }
@@ -907,6 +1024,53 @@ input[type="submit"]{
         font-size: 12px;
         color: #666;
     }
+
+    /*==PROFIL===*/
+    .header-profil{
+        padding-top:40px;
+    }
+    .header-profil img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .contact li {
+        font-size: 11px;
+    }
+
+    .header-title h1{
+        font-size: 20px;
+    }
+
+    .header-title h3{
+        font-size: 13px;
+    }
+
+    .skill-icons{
+        width: 30px;
+        height: auto;
+    }
+
+    .contact img{
+        width: 15px;
+    }
+
+    .p-subtitles {
+        font-size: 25px;
+    }
+
+    .profil-info p{
+        font-size: 13px;
+    }
+
+    .profil-blogs li{
+        font-size: 12px;
+    }
+
+    .p-subtitles{
+        font-size: 20px;
+    }
+
 }
 
 /*=======================================================================*/
