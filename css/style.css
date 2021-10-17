@@ -385,7 +385,6 @@ footer{
     position: absolute;
     top: 550px;
     left: 57%;
-    transform: translate(-50%,-50%);
     width: 63%;
     border-radius: 10px;
     font-family: sans-serif;
@@ -402,6 +401,7 @@ footer{
 
 .blog-body-create .center .left-side{
     width: 30%;
+
 }
 
 .blog-body-create .center .right-side{
@@ -412,23 +412,28 @@ footer{
     display: flex;
     margin: 30px 0 0 0;
     flex-wrap: wrap;
-    padding: 10px 40px;
+    padding: 10px 10px;
 }
 
 .blog-body-create .center form {
-    padding: 0 14px;
+    padding: 0 5px;
+}
+
+.blog-body-create section {
+    margin-left: 25%;
 }
 
 
 #create-short-text{
     width: 100%;
-    border-color: #1193D6;
+    border-color: #2691d9;
+    height: 24vh;
 }
 
 #create-blog-text{
-    width: 90%;
-    border-color: #1193D6;
-    height: 370px;
+    width: 100%;
+    border-color: #2691d9;
+    height: 46vh;
 }
 
 textarea{
@@ -438,18 +443,15 @@ textarea{
 
 .blog-body-create label{
     font-family: "Bahnschrift Condensed",sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     margin-right: 50%;
 }
 
 .blog-body-create input[type="submit"] {
-    width: 30%;
-    height: 43px;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    outline: none;
-    right: 0;
+    width: 179px;
+    height: 38px;
+    font-size: 16px;
+    margin-top: 13px;
 }
 
 /*=============================================================================*/
@@ -771,6 +773,10 @@ input[type="submit"]{
         margin-left: 260px;
     }
 
+    .blog-body-create section {
+        margin-left: 25%;
+    }
+
     .box{
         width: 90%;
     }
@@ -880,87 +886,59 @@ input[type="submit"]{
         height: 70px;
     }
 
-    /*PRIHLASOVANIE*/
-    .center{
-        width: 300px;
-        left:58%;
+    /*PÍSANIE BLOGU*/
+    .blog-body-create h1{
+        font-size: 27px;
     }
 
-    /*==PROFIL===*/
-    .header-profil{
-        padding-top:60px;
-    }
-    .header-profil img{
-        width: 100px;
-        height: 100px;
+    .blog-body-create #btn-new-blog{
+        font-size: 13px;
+        padding: 7px 20px;
+        margin-top: 150px;
     }
 
-    .header-title{
+    .blog-body-create li{
+        margin:12px 0;
+        padding: 0;
+    }
+
+    .blog-body-create .center{
+        top: 655px;
+        left: 60%;
+        margin: 0;
+    }
+
+    .blog-body-create .center {
+        display: block;
+    }
+
+    .blog-body-create .center .left-side {
+        width: 100%;
+    }
+
+    .blog-body-create .center .right-side {
+        width: 100%;
+    }
+
+    .blog-body-create h1{
         padding-top: 10px;
     }
 
-    .contact li {
-        font-size: 13px;
+    .blog-body-create #first-section{
+        margin-top:120px;
     }
 
-    .header-title h1{
-        font-size: 30px;
-    }
-
-    .skill-icons{
-        width: 40px;
-        height: auto;
-    }
-
-    .contact img{
-        width: 15px;
-    }
-
-    .p-subtitles {
-        font-size: 25px;
-    }
-
-    .profil-info p{
-        font-size: 15px;
-    }
-
-    .profil-blogs li{
-        font-size: 15px;
-    }
-
-    .grid{
-        margin: 10px 0 0 0;
-    }
-
-    .grid-item{
-        min-width: 200px;
-        min-height: 200px;
-        max-width: 400px;
-        flex: 0 0 20%;
-        padding: 7px;
-    }
-
-    .detail-grid-item{
-        text-align: center;
+    .blog-body-create input[type="submit"] {
         width: 100%;
-        font-family: Arial, sans-serif;
+        height: 30px;
         font-size: 12px;
+        margin-top: 6px;
+        margin-bottom: 10px;
     }
 
-    /*PORTFOLIA*/
-    .portfolio-page #first-section{
-        margin-top: 165px;
-    }
-    .portfolio-page h1{
-        font-size: 35px;
-    }
-
-    .portfolio-page h3{
-        font-size: 15px;
-    }
-
-    .portfolio-page .grid-item{
-        margin: 10px 0;
+    .blog-body-create label {
+        font-size: 14px;
+        margin-right: 15%;
     }
 
     /*REGISTRÁCIA*/
@@ -994,6 +972,27 @@ input[type="submit"]{
         padding-left: 12px;
     }
 
+    /*PRIHLASOVANIE*/
+    .center{
+        width: 300px;
+        left:58%;
+    }
+
+    /*PORTFOLIA*/
+    .portfolio-page #first-section{
+        margin-top: 165px;
+    }
+    .portfolio-page h1{
+        font-size: 35px;
+    }
+
+    .portfolio-page h3{
+        font-size: 15px;
+    }
+
+    .portfolio-page .grid-item{
+        margin: 10px 0;
+    }
 
 }
 
@@ -1312,6 +1311,45 @@ input[type="submit"]{
         margin-top: 54px;
     }
 
-}
+    /*PÍSANIE BLOGU*/
+    .blog-body-create h1{
+        font-size: 25px;
+    }
 
+    .blog-body-create #btn-new-blog{
+        font-size: 12px;
+        padding: 6px 18px;
+        margin-top: 150px;
+    }
+
+    .blog-body-create li{
+        margin:12px 0;
+        padding: 0;
+    }
+
+    .blog-body-create .center{
+        top: 630px;
+    }
+
+
+    .blog-body-create h1{
+        padding-top: 0;
+    }
+
+    .blog-body-create #first-section{
+        margin-top:120px;
+    }
+
+    .blog-body-create label {
+        font-size: 12px;
+        margin-right: 10%;
+    }
+
+    textarea {
+        font-family: Arial,sans-serif;
+        font-size: 12px;
+    }
+
+
+}
 /*=======================================================================*/
