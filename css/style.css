@@ -375,85 +375,6 @@ footer{
     margin: 25px;
 }
 
-/*PÍSANIE BLOGU*/
-.blog-body-create #btn-new-blog{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.blog-body-create .center{
-    position: absolute;
-    top: 550px;
-    left: 57%;
-    width: 63%;
-    border-radius: 10px;
-    font-family: sans-serif;
-    background: white;
-    margin: 25px;
-    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
-}
-
-.blog-body-create .center h1{
-    font-size: 20px;
-    text-align: left;
-    padding-left: 20px;
-}
-
-.blog-body-create .center .left-side{
-    width: 30%;
-
-}
-
-.blog-body-create .center .right-side{
-    width: 70%;
-}
-
-.blog-body-create .center{
-    display: flex;
-    margin: 30px 0 0 0;
-    flex-wrap: wrap;
-    padding: 10px 10px;
-}
-
-.blog-body-create .center form {
-    padding: 0 5px;
-}
-
-.blog-body-create section {
-    margin-left: 25%;
-}
-
-
-#create-short-text{
-    width: 100%;
-    border-color: #2691d9;
-    height: 24vh;
-}
-
-#create-blog-text{
-    width: 100%;
-    border-color: #2691d9;
-    height: 46vh;
-}
-
-textarea{
-    font-family:Arial,sans-serif;
-    font-size: 14px;
-}
-
-.blog-body-create label{
-    font-family: "Bahnschrift Condensed",sans-serif;
-    font-size: 15px;
-    margin-right: 50%;
-}
-
-.blog-body-create input[type="submit"] {
-    width: 179px;
-    height: 38px;
-    font-size: 16px;
-    margin-top: 13px;
-}
-
 /*=============================================================================*/
 /*==PROFIL===*/
 section {
@@ -584,6 +505,7 @@ section {
     font-family: Arial, sans-serif;
 }
 
+/*==========================================================================*/
 /*PRIHLASENIE SA*/
 .abstract-background{
     width: 100%;
@@ -700,6 +622,7 @@ input[type="submit"]{
     text-decoration: underline;
 }
 
+/*========================================================================*/
 /*REGISTRÁCIA*/
 .registration-body .center{
     top: 57%;
@@ -729,6 +652,100 @@ input[type="submit"]{
 .registration-body h3{
     font-size: 20px;
     margin-bottom: 5px;
+}
+
+/*========================================================================*/
+/*PÍSANIE BLOGU*/
+.blog-body-create #btn-new-blog{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.blog-body-create .center{
+    position: absolute;
+    top: 550px;
+    left: 57%;
+    width: 63%;
+    border-radius: 10px;
+    font-family: sans-serif;
+    background: white;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    margin: 43px 0 0 0
+}
+
+.blog-body-create .center h1{
+    font-size: 20px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.blog-body-create .center .left-side{
+    width: 30%;
+
+}
+
+.blog-body-create .center .right-side{
+    width: 70%;
+}
+
+.blog-body-create .center {
+    display: flex;
+    margin: 50px 0 0 0;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+}
+
+.blog-body-create .center form {
+    padding: 0 5px;
+}
+
+.blog-body-create section {
+    margin-left: 25%;
+}
+
+
+#create-short-text{
+    width: 100%;
+    border-color: #2691d9;
+    height: 24vh;
+}
+
+#create-blog-text{
+    width: 100%;
+    border-color: #2691d9;
+    height: 46vh;
+}
+
+textarea{
+    font-family:Arial,sans-serif;
+    font-size: 14px;
+}
+
+.blog-body-create label{
+    font-family: "Bahnschrift Condensed",sans-serif;
+    font-size: 15px;
+    margin-right: 50%;
+}
+
+.blog-body-create input[type="submit"] {
+    width: 179px;
+    height: 38px;
+    font-size: 16px;
+    margin-top: 13px;
+}
+
+/*===========================================================================*/
+/*ČLÁNOK*/
+
+.article-body p{
+    font-family: Arial,sans-serif;
+    font-size: 15px;
+    padding-bottom: 30px;
+}
+
+.article-body h2{
+    font-family: sans-serif;
+    font-size: 18px;
 }
 
 /*===========================================================================================*/
@@ -794,6 +811,11 @@ input[type="submit"]{
         min-width: 270px;
         min-height: 270px;
         max-width: 450px;
+    }
+
+    /*==ČLÁNOK===*/
+    .article-body section {
+        margin-top: 10px;
     }
 }
 
@@ -903,7 +925,7 @@ input[type="submit"]{
     }
 
     .blog-body-create .center{
-        top: 655px;
+        top: 680px;
         left: 60%;
         margin: 0;
     }
@@ -992,6 +1014,11 @@ input[type="submit"]{
 
     .portfolio-page .grid-item{
         margin: 10px 0;
+    }
+
+    /*ČLÁNOK*/
+    .article-body h2{
+        font-size: 15px;
     }
 
 }
@@ -1328,7 +1355,7 @@ input[type="submit"]{
     }
 
     .blog-body-create .center{
-        top: 630px;
+        top: 680px;
     }
 
 
@@ -1350,6 +1377,9 @@ input[type="submit"]{
         font-size: 12px;
     }
 
-
+    /*ČLÁNOK*/
+    .article-body h2{
+        font-size: 13px;
+    }
 }
 /*=======================================================================*/
