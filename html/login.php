@@ -48,9 +48,9 @@
       <img class="btn-menu" onclick="openCloseNav()" src="../img/menu.png" alt="menu">
 
       <ul id="menu-items">
-        <li class="no-active"><a href="home.html">Domov</a></li>
-        <li class="no-active"><a href="blog-blogs.html">Blog</a></li>
-        <li class="no-active"><a href="portfolios.html">Portfóliá</a></li>
+        <li class="no-active"><a href="home.php">Domov</a></li>
+        <li class="no-active"><a href="blog-blogs.php">Blog</a></li>
+        <li class="no-active"><a href="portfolios.php">Portfóliá</a></li>
         <!--<li><a href="#">Nové pozície</a></li>-->
       </ul>
 
