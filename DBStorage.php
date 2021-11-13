@@ -129,4 +129,23 @@ class DBStorage
         $stmt->bindParam(1, $id, PDO::PARAM_INT);
         $stmt->execute();
     }
+
+    public function login(string $username, string $password)
+    {
+
+        $stmt = $this->conection->prepare ("SELECT * FROM users WHERE email = :email AND password = :password");
+        $stmt->execute(['email' => $username, 'password' => $password]);
+
+        $count = $stmt->rowCount();
+        if ($count > 0)
+        {
+            $user = $stmt->fetch();
+            $_SESSION["id"] = $user[0];
+            $_SESSION["name"] = $user[1];
+            $_SESSION["surname"] = $user[2];
+            header("home.php");
+        }else{
+            $message = '<label>Prihlasovacie meno alebo heslo je nesprávne</label>';
+        }
+    }
 }

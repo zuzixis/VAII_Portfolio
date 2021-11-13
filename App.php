@@ -28,12 +28,20 @@ class App
             $this->deteleBlog();
         }
 
+        if (isset($_POST['login'])){
+            if (empty($_POST["username"]) || empty($_POST["password"])){
+                $message = '<label>Vsetky polia su povinne</label>';
+            }else{
+                $this->login();
+            }
+        }
+
 
     }
 
     private function saveBlog()
     {
-        $newBlog = new Blog(title: $_POST['title'],text: $_POST['text'] ,user_id: 2 );
+        $newBlog = new Blog(title: $_POST['title'],text: $_POST['text'] ,user_id: 1 );
         $this->storage->storeNewBlog($newBlog);
     }
 
@@ -86,6 +94,12 @@ class App
     private function deteleBlog()
     {
         $this->storage->deleteBlog($_POST['id']);
+    }
+
+    private function login()
+    {
+        $this->storage->login($_POST['username'], $_POST['password']);
+        header("location:home.php");
     }
 
 

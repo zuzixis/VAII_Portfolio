@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require "../App.php";
     $app = new App();
 ?>
@@ -53,8 +54,18 @@
         <li><a href="home.php">Domov</a></li>
         <li class="active"><a href="blog-blogs.php">Blog</a></li>
         <li><a href="portfolios.php">Portfóliá</a></li>
-        <li class="no-active">
-          <a id="btn-login" href="login.php">Prihlásenie</a></li>
+          <?php
+          if (isset($_SESSION["id"]))
+          {
+              echo '<li class="no-active"><a href="logout.php"></a>';
+              echo $_SESSION["name"];
+              echo '<li class="no-active"><a id="btn-login" href="logout.php">Odhlásiť sa</a>';
+
+              //echo '<img class="log-photo" src="../files/profil_photos/my-photo.JPG">';
+          }else{
+              echo '<a id="btn-login" href="login.php">Prihlásenie</a></li>';
+          }
+          ?>>
       </ul>
 
     </nav>

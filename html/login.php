@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    require "../App.php";
+    $app = new App();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,30 +57,28 @@
         <li class="no-active"><a href="home.php">Domov</a></li>
         <li class="no-active"><a href="blog-blogs.php">Blog</a></li>
         <li class="no-active"><a href="portfolios.php">Portfóliá</a></li>
-        <!--<li><a href="#">Nové pozície</a></li>-->
       </ul>
 
     </nav>
   </div>
 
 </header>
-<div> <!--class="login-background"-->
+<div>
   <img class="abstract-background" src="../img/login-bg2.png" alt="pozadie">
   <div class="center">
     <h1>Prihlásenie</h1>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
       <div class="txt_field">
-        <input id="log-name" type="text" required>
+        <input id="log-name" type="text" name="username" required>
          <span></span>
-        <label for="log-name">Užívateľské meno</label>
+        <label for="log-name">Email</label>
       </div>
       <div class="txt_field">
-        <input id="log-pass" type="password" required>
+        <input id="log-pass" type="password" name="password" required>
         <span></span>
         <label for="log-pass">Heslo</label>
       </div>
-      <div class="pass">Zabudnuté heslo?</div>
-      <input type="submit" value="Prihlásiť sa">
+      <input type="submit" name="login" value="Prihlásiť sa">
       <div class="signup_link">
         Nie ste zaregistrovaný? <a href="registration.html">Zaregistrovať sa</a>
       </div>

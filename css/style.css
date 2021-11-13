@@ -154,6 +154,12 @@ footer{
     background: #202020;
 }
 
+.log-photo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
 /*==========================================================================================*/
 /*===STYLE-DOMOV===*/
 .main-title{
