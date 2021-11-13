@@ -105,4 +105,28 @@ class DBStorage
         $projects = $stmt->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, Project::class);
         return $projects;
     }
+
+    public function updateBlog(Blog $updateBlog)
+    {
+        $blog = [
+            'id' => $updateBlog->getId(),
+            'text' => $updateBlog->getText(),
+            'title' => $updateBlog->getTitle()
+        ];
+
+        $stmt = $this->conection->prepare ("UPDATE blogs SET title = ?, text = ? WHERE id = ?");
+
+        $stmt->bindParam(1, $blog['title'], PDO::PARAM_STR);
+        $stmt->bindParam(2, $blog['text'], PDO::PARAM_STR);
+        $stmt->bindParam(3, $blog['id'], PDO::PARAM_INT);
+
+        $stmt->execute();
+    }
+
+    public function deleteBlog(int $id)
+    {
+        $stmt = $this->conection->prepare ("DELETE FROM blogs WHERE id = ?");
+        $stmt->bindParam(1, $id, PDO::PARAM_INT);
+        $stmt->execute();
+    }
 }

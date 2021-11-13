@@ -64,7 +64,7 @@
 <div class="blog-body blog-body-create">
   <section id="first-section">
     <div>
-      <h1>Písanie blogu...</h1>
+      <h1>Úprava blogu...</h1>
       <nav>
         <ul>
           <li class="no-active">
@@ -75,27 +75,31 @@
     </div>
   </section>
   <section>
-      <form action="blog-blogs.php" method="post" enctype="multipart/form-data">
-    <div class="center">
-      <div class="left-side">
-        <h1>Nový článok</h1>
-          <div class="txt_field">
-            <input id="create-title" type="text" name="title" required>
-            <span></span>
-            <label for="create-title">Nadpis</label>
-          </div>
-      </div>
-      <div class="right-side">
-          <div>
-            <label for="create-blog-text">Text:</label>
-            <textarea id="create-blog-text"  rows="10" cols="10" name="text">
-            </textarea>
-          </div>
-          <input type="submit" value="Vytvoriť blog" name="create-blog">
-      </div>
-
-    </div>
-      </form>
+      <?php foreach ($app->readBlog() as $blog) { ?>
+          <form action="blog-blogs.php" method="post" enctype="multipart/form-data">
+              <div class="center">
+                  <div class="left-side">
+                      <h1>Načítaný článok</h1>
+                      <label>Nadpis</label>
+                      <div class="txt_field">
+                          <!--<input id="create-title" type="text" name="title" required value="<?/*=$blog->getTitle()*/?>">-->
+                          <textarea id="create-title" rows="6" cols="48" name="title"><?=$blog->getTitle()?></textarea>
+                          <span></span>
+                          <!--<label for="create-title">Nadpis</label>-->
+                      </div>
+                  </div>
+                  <div class="right-side">
+                      <div>
+                          <input type="hidden" name="id" value="<?= $blog->getId() ?>">
+                          <input type="hidden" name="user_id" value="<?= $blog->getUserId() ?>">
+                          <label for="create-blog-text">Text:</label>
+                          <textarea id="create-blog-text"  rows="10" cols="10" name="text"><?=$blog->getText()?></textarea>
+                      </div>
+                      <input type="submit" value="Upraviť blog" name="update-blog">
+                  </div>
+              </div>
+          </form>
+      <?php }?>
   </section>
 </div>
 </body>

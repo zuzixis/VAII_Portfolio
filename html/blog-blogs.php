@@ -89,8 +89,15 @@
           <a href="profil.php?id=<?=$blog->getUserId()?>"><h4><?=$blog->getAuthorFullName()?></h4></a>
           <p>
               <?=$out = strlen($blog->getText()) > 250 ? substr($blog->getText(),0,250)."..." : $blog->getText();?>
-
           </p>
+            <div class="skuska">
+                <a class="skuska-item" id="btn-update-blog" href="update-blog.php?id=<?=$blog->getId()?>">Upraviť článok</a>
+                <form method="POST" class="skuska-item">
+                    <input type="hidden" name="id" value="<?= $blog->getId() ?>">
+                    <button id="btn-delete-blog" href="#" name="delete-blog">Vymazať článok</button>
+
+                </form>
+            </div>
         </div>
       </div>
         <?php }?>

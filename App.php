@@ -16,9 +16,18 @@ class App
     {
         $this->storage = new DBStorage();
 
-        if (isset($_POST['title']) && isset($_POST['text'])){
+        if (isset($_POST['create-blog'])){
             $this->saveBlog();
         }
+
+        if (isset($_POST['update-blog'])){
+            $this->updateBlog();
+        }
+
+        if (isset($_POST['delete-blog'])){
+            $this->deteleBlog();
+        }
+
 
     }
 
@@ -68,6 +77,16 @@ class App
         return $this->storage->getUsersProjects($_GET['id']);
     }
 
+    private function updateBlog()
+    {
+        $updateBlog = new Blog(id: $_POST['id'], title: $_POST['title'], text: $_POST['text'], user_id: $_POST['user_id']);
+        $this->storage->updateBlog($updateBlog);
+    }
+
+    private function deteleBlog()
+    {
+        $this->storage->deleteBlog($_POST['id']);
+    }
 
 
 }

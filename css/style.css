@@ -359,10 +359,13 @@ footer{
 .blog-body h4:hover{
     color: #0E78AD;
 }
+
+
 .blog-body p{
     font-size: 14px;
     font-family: Arial, sans-serif;
     padding-top: 5px;
+    margin-bottom: 7px;
 }
 
 .blogger-box{
@@ -373,6 +376,32 @@ footer{
 
 .blogger-box{
     margin: 25px;
+}
+
+#btn-update-blog , #btn-delete-blog {
+    background-color: #1193D6;
+    border-radius: 12px;
+    color: #FFF;
+    text-align: center;
+    font-family: Arial,Helvetica, sans-serif;
+    font-size: 11px;
+    padding: 5px;
+}
+
+#btn-delete-blog{
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.skuska{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.skuska-item{
+    margin: 5px;
 }
 
 /*=============================================================================*/
@@ -907,6 +936,7 @@ textarea{
         width: 70px;
         height: 70px;
     }
+
 
     /*PÍSANIE BLOGU*/
     .blog-body-create h1{
